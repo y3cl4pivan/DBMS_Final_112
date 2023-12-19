@@ -8,17 +8,49 @@
 ## File Structure
 
 - **`README`**: Provides setup instructions and information about the project.
-- **`index.php`**: The home page of the THSR Train Search System that links to the user and admin interfaces.
+- **`register.php`**: The register page of the NTUsed System to regist your member account.
 - **`composer.json`**: Defines the project's PHP dependencies and other metadata.
 - **`composer.lock`**: Lock file to record the exact versions of dependencies installed.
 - **`eloquent.php`**: Sets up the Eloquent ORM configuration and initializes the database connection.
-- **`admin_ORM.php`**: Administrator interface for the ORM-based search.
-- **`admin.php`**: Administrator interface for the SQL-based search.
-- **`user_ORM.php`**: User interface for the ORM-based search.
-- **`user.php`**: User interface for the SQL-based search.
+- **`add_to_cart.php`**: Function to use to add the project to shopping_cart.
+- **`admin_blocklistinfo.php`**: Record the list of user that are blocked.
+- **`admin_info.php`**: Personal page that record the information and can lead to admin function page.
+- **`admin_memberinfo.php`**: record all the infomation of the user that admin can see it.
+- **`admin_projectinfo.php`**: record all the infomation of the project that admin can see it.
+- **`admin_removedlistinfo.php`**: record the project which are reported.
+- **`admin_reportaccountinfo.php`**: record the account and reason that of member which are reported.
+- **`admin_reportprojectinfo.php`**: record the project and reason of which are reported.
+- **`admin_transactioninfo.php`**: record the transaction infomation.
+- **`db_password.txt`**: password
+- **`footer.php`**: Footer of main page that links to other pages.
+- **`forget_password.php`**: forget password page
+- **`send_success.php`**: forget password and send the email to you.
+- **`login.php`**: login page
+- **`main_page.php`**: main page to present project list
+- **`member_info.php`**: about your personal info if you are not admin
+- **`admin_info.php`**: about your personal info if you are admin
+- **`merchandise.php`**: detail of one project info
+- **`self_market.php`**: all the projects which you are selling, sold, and in transaction progress.
+- **`other_market.php`**: all the projects which other people are selling.
+- **`remove_from_cart.php`**: remove the project in your shopping_cart function.
+- **`reporting_account.php`**: report other seller.
+- **`reporting_project.php`**: report other project.
+- **`shopping_cart.php`**: record the project you added in your shopping cart
+- **`transaction_record.php`**: record your personal transaction_record
+- **`update_project_status.php`**: update the project status in admin function of **`admin_projectinfo.php`**
+- **`update_status.php`**: update the member status in admin function of **`admin_memberinfo.php`**
+
+- 
 - **`style.css`**: Contains the CSS styles for the project's frontend.
-
-
+- **`admin_info.css`**: Contains the CSS styles for the **admin_info.php** frontend.
+- **`footer.css`**: Contains the CSS styles for the **footer.php** frontend in main page.
+- **`login.css`**: Contains the CSS styles for the **login.php** frontend in main page.
+- **`member_info.css`**: Contains the CSS styles for the **member_info.php** frontend in main page.
+- **`admin_info.css`**: Contains the CSS styles for the **admin_info.php** frontend in main page.
+- **`merchandise.css`**: Contains the CSS styles for the **merchandise.php** frontend in main page.
+- **`register.css`**: Contains the CSS styles for the **register.php** frontend in main page.
+- **`shopping_cart.css`**: Contains the CSS styles for the **shopping_cart.php** frontend in main page.
+- **`transaction_record.css`**: Contains the CSS styles for the **transaction_record.php** frontend in main page.
 
 
 
@@ -88,17 +120,16 @@ Access the system via **`http://localhost/your-project-folder/`** in your web br
 ### **User Interface**
 
 Navigate to **`Register.php`** for the User Search interface.
-Navigate to **`Login.php`**
+After you sign in, you can use the **`footer.php`** to navigate to main page, shopping cart page, transaction_record page, and personal info page.
+You can click project link to merchandise page, and get to other's market by clicking their name.
 
 ### **Admin Interface**
-Construct the following query in SQL：INSERT INTO admin (admin_id, member_id) VALUES ('最新編號', '自己的id')
-You can login and navigate to 個人資料 in footer，then you can see the link of admin functions.
+Construct the following query in SQL：**INSERT INTO admin (admin_id, member_id) VALUES ('最新編號', '自己的id')**
+You can login and navigate to 個人資料 in  **`footer.php`**，then you can see the link of admin functions.
 
 
 ### **Database Performance (Optional)**
 
-To improve performance, create indexes on the **`reserved_ticket`** and **`non_reserved_ticket`** tables for the **`trip_id`**, **`depart_station_id`**, **`arrive_station_id`**, and **`travel_date`** columns.
+To improve performance, create indexes on the 
 
-## **Styles and Aesthetics**
 
-Update **`style.css`** to refine the aesthetics of the index menu and add the subtitle "NTUIM 112-1 Database Management" to the interface.
