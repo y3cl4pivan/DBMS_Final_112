@@ -56,7 +56,11 @@
             echo "<input type='text' name='preferred_transaction_place'><br/><br/>";
 
             echo "<input type='submit' value='註冊' name='submit'>";
+            echo "<input type='submit' value='返回登入' onclick='location.href=\"login.php\";'>";
             echo "<input type='reset' value='重設' name='submit'>";
+
+            // Add a new button to redirect to login.php
+            
 
             if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 $member_id=$_POST["member_id"];
