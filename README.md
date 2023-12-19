@@ -1,8 +1,8 @@
 # DBMS_Final_112
 
-# **THSR Train Search System**
+# **NTUsed Book transaction platform System**
 
-> **NTUIM 112-1 Database Management Demo**
+> **NTUIM 112-1 Database Management**
 > 
 
 ## File Structure
