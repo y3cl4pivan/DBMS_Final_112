@@ -1,0 +1,36 @@
+#footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* 垂直方向上居中對齊 */
+}
+
+#footer a {
+    text-decoration: none;
+    color: rgb(18, 17, 17);
+    font-weight: bold;
+    margin-right: 20px; /* 調整元素之間的間距 */
+}
+
+#footer img {
+    display: block;
+    margin: 0 auto;
+    width: 100px; /* 設置圖片寬度 */
+}
+
+
+
+#footer ul a {
+    color: black; /* Set text color to black */
+    text-decoration: none; /* Remove underline from links */
+    display: block;
+    text-align: center;
+    margin-top: 5px; /* Optional: Adjust top margin for better spacing */
+}
+
+#footer ul img {
+    display: block;
+    margin: 0 auto;
+}

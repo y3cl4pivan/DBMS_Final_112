@@ -1,0 +1,57 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left; /* 更改這裡以左對齊文字 */
+}
+
+.container p {
+    margin-left: 20px; /* 增加左邊距以與白色邊界保持距離 */
+}
+
+.container a {
+    display: inline-block; /* 將連結設置為行內塊，以實現在同一排的效果 */
+    margin: 10px 0; /* 調整上下外邊距 */
+    width: calc(100% / 5 - 20px); /* 平均分配同一行的寬度 */
+    text-decoration: none;
+    padding: 10px;
+    /* background-color: #4CAF50; 加入背景色，可以自行更改 */
+    /* color: white; */
+    border-radius: 5px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}

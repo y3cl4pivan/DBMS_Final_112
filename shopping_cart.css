@@ -1,0 +1,86 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.project {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.project h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.project a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.project p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.form-remove {
+    display: inline-block;
+    background-color: #DC3545;
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.form-remove:hover {
+    background-color: #C82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project h2 {
+        font-size: 20px;
+    }
+
+    .project p {
+        font-size: 14px;
+    }
+
+    .form-remove {
+        font-size: 12px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+a:hover {
+    color: #0056b3;
+}
