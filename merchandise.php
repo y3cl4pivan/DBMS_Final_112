@@ -91,8 +91,8 @@
         echo "<script>var currentMemberId = $currentMemberId;</script>";
 
 
-        $query = "SELECT b.book_name, ba.author_name, b.publisher, pd.product_sell_status, proj.project_price,
-                    m.name -- 添加這一行以獲取賣家的信息
+        $query = "SELECT proj.project_id, b.book_name, ba.author_name, b.publisher, pd.product_sell_status, proj.project_price,
+                    m.name, proj.project_seller_id -- 添加這一行以獲取賣家的信息
                     FROM product pd
                     JOIN project_product_info p_info ON pd.product_id = p_info.product_id
                     JOIN book b ON pd.book_id = b.book_id
@@ -108,13 +108,21 @@
 
         // Display information for the selected product
         if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            
             echo "<h2>Merchandise Information</h2>";
+            echo "<p><strong>Project id:</strong>".$row['project_id']."</h2>";
+            echo "<a href=reporting_project.php?member_id.$member_id ?>
+            <button>檢舉商品</button></a>";
+
             echo "<p><strong>Book Name:</strong> " . $row['book_name'] . "</p>";
             echo "<p><strong>Author(s):</strong> " . $row['author_name'] . "</p>";
             echo "<p><strong>Publisher:</strong> " . $row['publisher'] . "</p>";
             echo "<p><strong>Product Status:</strong> " . $row['product_sell_status'] . "</p>";
             echo "<p><strong>Project Price:</strong> $" . $row['project_price'] . "</p>";
-            echo "<p><strong>Product Seller:</strong> " . $row['name'] . "</p>";
+            // echo "<p><strong>Product Seller:</strong> " . $row['name'] . "</p>";
+            $href2 = "other_market.php?member_id=" . $row['project_seller_id'];
+            echo "<p>Project Seller : " . "<a href = " . $href2 . ">" . $row['name'] . "</a>" . "</p>";
+
         }
 
         // Query to retrieve information for remaining products in the project

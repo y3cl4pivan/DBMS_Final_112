@@ -62,7 +62,6 @@
             
             $href1 = "merchandise.php?project_id=" . $item['project_id'];
             echo "<h2> Project ID : " . "<a href = " . $href1 . ">" . $item['project_id'] . "</a></h2>";
-            // echo "<h2> Project ID : " . "<a href = " . $href1 . ">" . $item['project_id'] . "</a>" . "</td><td>" . $result['ppr'] . "</h2>";
             
             // Add a remove button next to each project
             echo "<form method='post' action='remove_from_cart.php'>";
@@ -75,10 +74,6 @@
             echo "<p>Launch Date: {$item['launch_date']}</p>";
             echo "<p>Book Title: {$item['book_name']}</p>";
             echo "<p>Book Condition: {$item['book_condition']}</p>";
-            // echo "<p>Product Seller: {$item['name']}</p>";
-            // echo "<p>Product Seller ID: {$item['product_seller_id']}</p>";
-            // echo "<p>Product Seller:" . $item['name'] . "</p>";
-            // echo $item['project_seller_id'];
 
             $href2 = "other_market.php?member_id=" . $item['project_seller_id'];
             echo "<p>Project Seller : " . "<a href = " . $href2 . ">" . $item['name'] . "</a>" . "</p>";

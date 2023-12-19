@@ -23,7 +23,7 @@
 
         echo "<h1>檢舉</h1>";
         echo "<form method='post' action='reporting.php'>";
-        echo "欲檢舉帳號id：";
+        echo "欲檢舉商品id：";
         echo "<input type='text' name='be_reported_project_id'><br/><br/>";
         echo "檢舉理由：";
         echo "<input type='text' name='reason'><br><br>";
