@@ -130,6 +130,12 @@ You can login and navigate to 個人資料 in  **`footer.php`**，then you can s
 
 ### **Database Performance (Optional)**
 
-To improve performance, create indexes on the 
+To improve performance, create indexes on the ON member_account (account, password) to accelerate login.
+CREATE index on product (product_seller_id) to search for specific seller's product when link to the project.
+CREATE index on member_shopping_cart (member_id, project_id) to accelerate login into the shopping cart.
+CREATE index on project (project_seller_id) to search for sepcific seller's project.
+CREATE INDEX ON product (book_id) to accelerate find out specific book and its info.
+
+
 
 
